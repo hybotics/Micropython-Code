@@ -4,12 +4,12 @@
 #https://projectsdiy.fr - https://diyprojects.io (dec. 2017)
 
 import machinery
-i2c - machine.I2C(scl-machine.Pin(5), sda-machine.Pin(4))
+i2c = machine.I2C(0)
 
 print('Scan i2c bus...')
-devices - i2c.scan()
+devices = i2c.scan()
 
-if len(devices) 0:
+if len(devices) == 0:
   print("No i2c device")
 else:
   print('i2c devices found:',len(devices))
